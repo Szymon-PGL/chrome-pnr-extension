@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 400px;
+      min-height: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .confirmation {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .confirmation-header {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .timestamp {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .data-field {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .field-name {
+      font-weight: bold;
+      color: #666;
+      display: inline-block;
+      width: 80px;
+    }
+    .field-value {
+      color: #333;
+    }
+    .controls {
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    #clearBtn {
+      background-color: #e74c3c;
+      color: white;
+    }
+    #exportBtn {
+      background-color: #3498db;
+      color: white;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    #confirmations {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .no-data {
+      text-align: center;
+      color: #999;
+      padding: 20px;
+    }
+    .status {
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h2>Booking Confirmations</h2>
+<div class="controls">
+  <button id="exportBtn">Export as JSON</button>
+  <button id="clearBtn">Clear All</button>
+</div>
+<div id="confirmations"></div>
+<div class="status">Monitoring: localhost:4200, new.lotinternal.com</div>
+<script src="popup.js"></script>
+</body>
+</html>

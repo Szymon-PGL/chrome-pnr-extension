@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Booking Confirmation Capture",
+  "version": "1.0",
+  "description": "Captures booking confirmation data from localhost:4200",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "webNavigation",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "http://localhost:4200/*",
+    "http://new.lotinternal.com/*",
+    "https://new.lotinternal.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:4200/*", "https://new.lotinternal.com/*", "http://new.lotinternal.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
